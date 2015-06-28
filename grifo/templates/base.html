@@ -1,0 +1,50 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en" ng-app="Grifo">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% trans 'Grifo' %}</title>
+    <!-- Bootstrap CSS -->
+    <link href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Main CSS -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="{% static 'libs/html5shiv/html5shiv.min.js' %}"></script>
+      <script src="{% static 'libs/respond/respond.min.js' %}"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="container">
+    <div ng-view></div>
+</div>
+
+<!-- jQuery  -->
+<script src="{% static 'libs/jquery/jquery.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'libs/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- AngularJS  -->
+<script src="{% static 'libs/angular/angular.min.js' %}"></script>
+<!-- AngularJS Route  -->
+<script src="{% static 'libs/angular-route/angular-route.min.js' %}"></script>
+
+{% comment %}
+<!-- App  -->
+<script src="{% static 'grifo/app.js' %}"></script>
+<!-- Directives -->
+<!-- Controllers  -->
+<script src="{% static 'grifo/snippets/controllers.js' %}"></script>
+<!-- Services  -->
+<script src="{% static 'grifo/snippets/services.js' %}"></script>
+<!-- Routes  -->
+<script src="{% static 'grifo/routes.js' %}"></script>
+{% endcomment %}
+
+
+</body>
+</html>
