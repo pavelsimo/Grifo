@@ -22,7 +22,7 @@ class SnippetCategory(models.Model):
 
 class Snippet(models.Model):
     # Foreign keys
-    owner = models.ForeignKey(User)
+    owner = models.ForeignKey(User, null=True)
     category = models.ForeignKey(SnippetCategory)
 
     # Fields

@@ -21,7 +21,8 @@
 <body>
 
 <div class="container">
-    <div ng-view></div>
+    {% block content %}
+    {% endblock %}
 </div>
 
 <!-- jQuery  -->
@@ -44,7 +45,6 @@
 <!-- Routes  -->
 <script src="{% static 'grifo/routes.js' %}"></script>
 {% endcomment %}
-
 
 </body>
 </html>
