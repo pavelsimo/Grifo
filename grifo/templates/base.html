@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container-fluid">
     {% block content %}
     {% endblock %}
 </div>
@@ -33,18 +33,28 @@
 <script src="{% static 'libs/angular/angular.min.js' %}"></script>
 <!-- AngularJS Route  -->
 <script src="{% static 'libs/angular-route/angular-route.min.js' %}"></script>
+<!-- AngularJS Resource  -->
+<script src="{% static 'libs/angular-resource/angular-resource.min.js' %}"></script>
 
-{% comment %}
+
 <!-- App  -->
-<script src="{% static 'grifo/app.js' %}"></script>
+<script src="{% static 'grifo/App.js' %}"></script>
+
 <!-- Directives -->
-<!-- Controllers  -->
-<script src="{% static 'grifo/snippets/controllers.js' %}"></script>
+
 <!-- Services  -->
-<script src="{% static 'grifo/snippets/services.js' %}"></script>
+<script src="{% static 'grifo/snippets/services/Snippet.js' %}"></script>
+<script src="{% static 'grifo/snippets/services/SnippetCategory.js' %}"></script>
+
+<!-- Controllers  -->
+<script src="{% static 'grifo/snippets/controllers/SnippetsController.js' %}"></script>
+<script src="{% static 'grifo/snippets/controllers/SnippetsDeleteController.js' %}"></script>
+<script src="{% static 'grifo/snippets/controllers/SnippetsEditController.js' %}"></script>
+<script src="{% static 'grifo/snippets/controllers/SnippetsShowController.js' %}"></script>
+
 <!-- Routes  -->
-<script src="{% static 'grifo/routes.js' %}"></script>
-{% endcomment %}
+<script src="{% static 'grifo/Routes.js' %}"></script>
+
 
 </body>
 </html>

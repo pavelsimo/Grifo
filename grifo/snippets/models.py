@@ -28,6 +28,7 @@ class Snippet(models.Model):
     # Fields
     title = models.CharField(max_length=255, blank=False, verbose_name=_('Title'))
     content = models.TextField(max_length=10000, blank=False, verbose_name=_('Content'))
+    description = models.TextField(max_length=10000, blank=True, verbose_name=_('Description'))
     url = models.CharField(max_length=255, blank=True, verbose_name=_('Url'))
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('Created at'))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_('Updated at'))

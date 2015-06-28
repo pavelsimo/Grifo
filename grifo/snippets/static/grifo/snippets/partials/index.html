@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-6" ng-repeat="snippet in snippets">
+        <h4><a ng-href="#/snippets/{$ snippet.id $}">{$ snippet.title $}</a></h4>
+        <div class="label label-info">{$ snippet.category.name $}</div>
+        <br>
+        <br>
+        <pre>{$ snippet.content $}</pre>
+    </div>
+</div>
