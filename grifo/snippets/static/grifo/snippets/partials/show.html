@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-12">
+
+        <!-- Title -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{$ snippet.title $}</h3>
+
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="row">
+            <div class="col-md-12">
+                <pre>{$ snippet.content $}</pre>
+                <span class="label label-info pull-right">{$ snippet.category.name $}</span>
+            </div>
+        </div>
+
+        <!-- Description -->
+        <div ng-if="snippet.description" class="row">
+            <div class="col-md-12">
+                {$ snippet.description $}
+            </div>
+        </div>
+
+        <!-- Url -->
+        <div ng-if="snippet.url" class="row">
+            <div class="col-md-12">
+                <a ng-href="{$ snippet.url $}">{$ snippet.url $}</a>
+            </div>
+        </div>
+        <br>
+
+        <!-- Actions -->
+        <div class="row">
+            <div class="col-md-12">
+                <a class="btn btn-default btn-lg" ng-href="#/snippets/{$ snippet.id $}/edit">Edit</a>
+                <a class="btn btn-danger btn-lg" ng-click="deleteSnippet(snippet)" ng-disabled="isDeleting">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

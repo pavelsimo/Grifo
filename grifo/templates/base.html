@@ -21,8 +21,15 @@
 <body>
 
 <div class="container-fluid">
-    {% block content %}
-    {% endblock %}
+    <div class="row">
+        <div class="col-md-4">
+            <a class="brand" ng-href="#/">Grifo</a>
+        </div>
+        <div class="col-md-8">
+            <a class="btn btn-success btn-sm btn-addsnippet pull-right" ng-href="#/snippets/new">Add Snippet</a>
+        </div>
+    </div>
+    {% block content %}{% endblock %}
 </div>
 
 <!-- jQuery  -->
@@ -48,13 +55,12 @@
 
 <!-- Controllers  -->
 <script src="{% static 'grifo/snippets/controllers/SnippetsController.js' %}"></script>
-<script src="{% static 'grifo/snippets/controllers/SnippetsDeleteController.js' %}"></script>
+<script src="{% static 'grifo/snippets/controllers/SnippetsCreateController.js' %}"></script>
 <script src="{% static 'grifo/snippets/controllers/SnippetsEditController.js' %}"></script>
 <script src="{% static 'grifo/snippets/controllers/SnippetsShowController.js' %}"></script>
 
 <!-- Routes  -->
 <script src="{% static 'grifo/Routes.js' %}"></script>
-
 
 </body>
 </html>

@@ -1,0 +1,29 @@
+@import url("http://fonts.useso.com/css?family=Open+Sans:300,400,600,700&lang=en");
+
+body {
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #676a6c;
+    overflow-x: hidden;
+    margin: 20px;
+}
+
+.pd-top-sm {
+    margin-top: 20px;
+}
+
+.brand,
+.brand:hover,
+.brand:visited,
+.brand:active {
+    font-size: 50px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+.btn-addsnippet {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+}

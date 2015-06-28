@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-md-5">
+        <form>
+            <!-- Title -->
+            <fieldset class="form-group">
+                <label for="title">Title</label>
+                <input ng-model="snippet.title" id="title" type="text" class="form-control input-lg">
+            </fieldset>
+
+            <!-- Categories -->
+            <fieldset class="form-group">
+                <label for="category">Category</label>
+                <select ng-model="snippet.category" ng-options="category.id as category.name for category in categories" class="form-control"></select>
+            </fieldset>
+
+            <!-- Content -->
+            <fieldset class="form-group">
+                <label for="content">Snippet</label>
+                <textarea ng-model="snippet.content" id="content" rows="5" class="form-control input-lg" ></textarea>
+            </fieldset>
+
+            <!-- Description -->
+            <fieldset class="form-group">
+                <label form="description">Description</label>
+                <textarea ng-model="snippet.description" id="description" rows="5" cols="10" class="form-control input-lg" ></textarea>
+            </fieldset>
+
+            <fieldset class="form-group">
+                <label for="url">Url</label>
+                <input ng-model="snippet.url" id="url" type="text" class="form-control input-lg">
+            </fieldset>
+
+            <!-- Actions -->
+            <fieldset class="form-group">
+                <a class="btn btn-default btn-lg" ng-click="saveSnippet(snippet)" ng-disabled="isSubmitting">Save</a>
+            </fieldset>
+        </form>
+    </div>
+    <div class="col-md-7"></div>
+</div>

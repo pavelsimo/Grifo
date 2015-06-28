@@ -8,6 +8,10 @@
                 templateUrl: '/static/grifo/snippets/partials/index.html',
                 controller:  'SnippetsController'
             })
+            .when('/snippets/new', {
+                templateUrl: '/static/grifo/snippets/partials/edit.html',
+                controller:  'SnippetsCreateController'
+            })
             .when('/snippets/:id', {
                 templateUrl: '/static/grifo/snippets/partials/show.html',
                 controller:  'SnippetsShowController'
@@ -15,10 +19,6 @@
             .when('/snippets/:id/edit', {
                 templateUrl: '/static/grifo/snippets/partials/edit.html',
                 controller:  'SnippetsEditController'
-            })
-            .when('/snippets/:id/delete', {
-                //templateUrl: '/static/',
-                controller:  'SnippetsDeleteController'
             });
     });
 })();

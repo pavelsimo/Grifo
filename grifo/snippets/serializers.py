@@ -11,9 +11,12 @@ class SnippetCategorySerializer(serializers.ModelSerializer):
 
 
 class SnippetSerializer(serializers.ModelSerializer):
-    category = SnippetCategorySerializer(read_only=True, many=False)
+    category_name = serializers.SerializerMethodField()
+
+    def get_category_name(self, obj):
+        return obj.category.name
 
     class Meta:
         model = Snippet
-        fields = ('id', 'owner', 'category', 'title', 'content', 'url')
-        read_only_fields = ('id', 'created_at',)
+        fields = ('id', 'owner', 'category', 'category_name', 'title', 'content', 'description', 'url', 'updated_at')
+        read_only_fields = ('id', 'created_at', 'category_name')

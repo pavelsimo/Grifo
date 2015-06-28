@@ -1,9 +1,7 @@
 <div class="row">
-    <div class="col-md-6" ng-repeat="snippet in snippets">
-        <h4><a ng-href="#/snippets/{$ snippet.id $}">{$ snippet.title $}</a></h4>
-        <div class="label label-info">{$ snippet.category.name $}</div>
-        <br>
-        <br>
-        <pre>{$ snippet.content $}</pre>
+    <div ng-repeat="snippet in snippets" class="col-md-4">
+        <h3><a ng-href="#/snippets/{$ snippet.id $}">{$ snippet.title $}</a></h3>
+        <pre>{$ snippet.content | limitTo: 100 $}</pre>
+        <span class="label label-info pull-right">{$ snippet.category_name $}</span>
     </div>
 </div>
